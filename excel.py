@@ -24,7 +24,7 @@ class ExcelSGH():
         list_room = []
         list_name = []
         # 这里是load一个xlsx文件
-        wb = load_workbook(filename=r'../a.xlsx')
+        wb = load_workbook(filename=r'a.xlsx')
         # ws = wb.get_sheet_names()
         # 上面一句是取xlsx文件里面所有的Sheet名,return一个list
         # 上一句的输出是['表名1', '表名2']
@@ -95,7 +95,7 @@ class ExcelSGH():
         self.lb04_data, self.tl07_data, self.sx08_data, self.xs04_data, self.lt03_data, self.tl08_data, self.xs01_data = [], [], [], [], [], [], []
         four = ['龙北04', '桃李07', '学士08', '学士04']
         three = ['鹿田03', '桃李08', '学士01']
-        wb = load_workbook(filename=r'../b.xlsx')
+        wb = load_workbook(filename=r'b.xlsx')
         ws_all = wb.get_sheet_names()
         for i in ws_all:
             sheet_data = []
@@ -170,7 +170,7 @@ class ExcelSGH():
                 continue
 
     def load_c(self):
-        wb = load_workbook(filename=r'../c.xlsx')
+        wb = load_workbook(filename=r'c.xlsx')
         return wb
 
     def updata_a2c(self):
@@ -316,7 +316,7 @@ class ExcelSGH():
         self.updata_a2c()
         self.updata_b2c()
         self.updata_c2c()
-        self.c.save('../c.xlsx')
+        self.c.save('c.xlsx')
 
 
 if __name__ == "__main__":
